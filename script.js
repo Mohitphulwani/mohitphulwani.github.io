@@ -37,4 +37,9 @@ const reveal = () => {
   });
 };
 window.addEventListener('scroll', reveal);
-reveal(); // initial call to show cards already in view
+reveal(); // initial call
+
+// Smooth scroll for scroll-down arrow
+function scrollToProjects() {
+  document.querySelector('.projects').scrollIntoView({ behavior: 'smooth' });
+}

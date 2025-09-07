@@ -1,3 +1,4 @@
+// List of your projects
 const projects = [
   "used-car-price-prediction",
   "wellness-tourism-customer-prediction",
@@ -11,8 +12,10 @@ const projects = [
   "happy-cow-ice-cream-sales-analysis"
 ];
 
+// Get the container div
 const projectsContainer = document.getElementById('projects');
 
+// Create project cards dynamically
 projects.forEach(project => {
   const card = document.createElement('div');
   card.className = 'project-card';
@@ -24,7 +27,7 @@ projects.forEach(project => {
   projectsContainer.appendChild(card);
 });
 
-// Fade-in animation on scroll
+// Fade-in animation for project cards on scroll
 const cards = document.querySelectorAll('.project-card');
 const reveal = () => {
   const triggerBottom = window.innerHeight / 5 * 4;
@@ -34,4 +37,4 @@ const reveal = () => {
   });
 };
 window.addEventListener('scroll', reveal);
-reveal(); // initial call
+reveal(); // initial call to show cards already in view

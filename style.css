@@ -1,7 +1,7 @@
 /* Reset & base */
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Helvetica Neue', sans-serif; }
 body { 
-  background: url('background.jpg') no-repeat center center fixed;
+  background: url('assets/background.jpg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
   color: #333;
@@ -38,7 +38,7 @@ body::before {
 .icon-btn { font-size:1.5rem; color:#555; transition:0.3s; }
 .icon-btn:hover { color:#8c6e63; }
 
-.scroll-down { text-align:center; margin-top:20px; animation: bounce 2s infinite; }
+.scroll-down { text-align:center; margin-top:20px; cursor:pointer; animation: bounce 2s infinite; }
 .scroll-down i { font-size:2rem; color:#8c6e63; }
 @keyframes bounce { 0%,20%,50%,80%,100%{transform:translateY(0);} 40%{transform:translateY(10px);} 60%{transform:translateY(5px);} }
 

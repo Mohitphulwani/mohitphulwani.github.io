@@ -22,7 +22,7 @@ projects.forEach(project => {
   card.innerHTML = `
     <h3>${project.replace(/-/g,' ')}</h3>
     <p>Click below to view the project on GitHub.</p>
-    <a href="https://github.com/Mohitphulwani/${project}" class="btn" target="_blank">View Project</a>
+    <a href="https://github.com/Mohitphulwani/${project}" class="btn-download" target="_blank">View Project</a>
   `;
   projectsContainer.appendChild(card);
 });
@@ -39,7 +39,7 @@ const reveal = () => {
 window.addEventListener('scroll', reveal);
 reveal(); // initial call
 
-// Smooth scroll for scroll-down arrow
+// Smooth scroll for bottom scroll arrow
 function scrollToProjects() {
   document.querySelector('.projects').scrollIntoView({ behavior: 'smooth' });
 }

@@ -7,8 +7,6 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
-/* Overlay for readability */
 body::before {
   content: "";
   position: fixed;
@@ -32,66 +30,26 @@ body::before {
 .hero-text h1 { font-size:3rem; margin-bottom:10px; color:#555; }
 .hero-text p { font-size:1.2rem; margin-bottom:20px; color:#777; }
 
-.hero-buttons { display:flex; gap:15px; align-items:center; margin-bottom:20px; }
-.btn { display:inline-block; padding:10px 20px; background:#8c6e63; color:#fff; border-radius:5px; text-decoration:none; transition:0.3s; }
-.btn:hover { background:#6e5147; }
-
-.social-btn {
+/* Hero Buttons as download-style */
+.hero-buttons { display:flex; gap:15px; flex-wrap:wrap; margin-bottom:20px; }
+.btn-download {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 22px;
+  padding: 12px 24px;
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #fff;
   text-decoration: none;
+  background: #8c6e63;
   transition: 0.3s;
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
-.github-btn { background: #333; }
-.github-btn:hover { background: #555; }
-.linkedin-btn { background: #0A66C2; }
-.linkedin-btn:hover { background: #064785; }
-
-/* Scroll down indicator */
-.scroll-down {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
-  cursor: pointer;
-  color: #8c6e63;
-  animation: bounce 2s infinite;
-}
-.scroll-down .mouse {
-  width: 24px;
-  height: 40px;
-  border: 2px solid #8c6e63;
-  border-radius: 14px;
-  position: relative;
-  margin-bottom: 6px;
-}
-.scroll-down .wheel {
-  width: 4px;
-  height: 8px;
-  background: #8c6e63;
-  border-radius: 2px;
-  position: absolute;
-  top: 6px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: wheel 1s infinite;
-}
-.scroll-down span {
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-}
-@keyframes wheel { 0%, 50%, 100% { top:6px; } 25% { top:20px; } }
-@keyframes bounce { 0%,20%,50%,80%,100% { transform:translateY(0); } 40%{ transform:translateY(10px);} 60%{ transform:translateY(5px);} }
+.btn-download:hover { background: #6e5147; }
 
 /* Projects Section */
-.projects { margin-top:60px; }
+.projects { margin-top:60px; position:relative; }
 .projects h2 { text-align:center; font-size:2rem; margin-bottom:30px; color:#555; }
 .project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; }
 .project-card { background:#fff; padding:20px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); opacity:0; transform:translateY(50px); transition:0.6s; }
@@ -109,3 +67,19 @@ footer { margin-top:50px; text-align:center; color:#999; font-size:0.9rem; paddi
 
 /* Fade-in animation for projects */
 .project-card.visible { opacity:1; transform:translateY(0); }
+
+/* Blinking Scroll Arrow */
+.scroll-arrow {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #8c6e63;
+  cursor: pointer;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}

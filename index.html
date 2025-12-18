@@ -22,8 +22,9 @@
         <span class="font-extrabold text-xl tracking-tight gradient-text">MP.</span>
         <div class="space-x-8 font-medium text-sm hidden md:flex items-center">
             <a href="#about" class="hover:text-indigo-600 transition">About</a>
-            <a href="#experience" class="hover:text-indigo-600 transition">Experience</a>
+            <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
             <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
+            <a href="#experience" class="hover:text-indigo-600 transition">Experience</a>
             <a href="Resume.pdf" target="_blank" class="text-indigo-600 font-bold hover:underline">View Resume</a>
             <a href="mailto:mohitphulwani01@gmail.com" class="bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition">Contact</a>
         </div>
@@ -57,53 +58,92 @@
     </section>
 
     <section id="about" class="bg-slate-900 text-white py-20">
-        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12 text-center md:text-left">
             <div>
-                <h3 class="text-indigo-400 font-bold mb-2 uppercase tracking-widest text-sm text-center md:text-left">Education</h3>
-                <p class="text-xl font-semibold text-center md:text-left">MS in Business Analytics</p>
-                <p class="text-slate-400 text-center md:text-left">Sacred Heart University (GPA 3.9)</p>
-                <div class="mt-4 p-4 border border-slate-700 rounded-lg">
+                <h3 class="text-indigo-400 font-bold mb-2 uppercase tracking-widest text-sm">Education</h3>
+                <p class="text-xl font-semibold">MS in Business Analytics</p>
+                <p class="text-slate-400">Sacred Heart University (GPA 3.9)</p>
+                <div class="mt-4 p-4 border border-slate-700 rounded-lg inline-block md:block">
                     <p class="text-sm italic text-slate-300">Double Major in Economics & Psychology</p>
                 </div>
             </div>
             <div>
-                <h3 class="text-indigo-400 font-bold mb-2 uppercase tracking-widest text-sm text-center md:text-left">Key Achievement</h3>
-                <p class="text-xl font-semibold text-center md:text-left">Symposium Presenter</p>
-                <p class="text-slate-400 text-center md:text-left leading-relaxed">
+                <h3 class="text-indigo-400 font-bold mb-2 uppercase tracking-widest text-sm">Key Achievement</h3>
+                <p class="text-xl font-semibold">Symposium Presenter</p>
+                <p class="text-slate-400 leading-relaxed">
                     Selected to present the <span class="text-white">County Obesity Risk tool</span> at the University Research Symposium, demonstrating high-impact AI solutions for public health.
                 </p>
             </div>
             <div>
-                <h3 class="text-indigo-400 font-bold mb-2 uppercase tracking-widest text-sm text-center md:text-left">Beyond the Data</h3>
-                <p class="text-xl font-semibold text-center md:text-left">Analytical Endurance</p>
-                <p class="text-slate-400 text-center md:text-left leading-relaxed">
-                    Long-distance runner and enthusiast of stand-up comedy. I value the intersection of pattern recognition, timing, and endurance in both my hobbies and my professional work.
+                <h3 class="text-indigo-400 font-bold mb-2 uppercase tracking-widest text-sm">Beyond the Data</h3>
+                <p class="text-xl font-semibold">Analytical Endurance</p>
+                <p class="text-slate-400 leading-relaxed">
+                    Long-distance runner and enthusiast of stand-up comedy. I value the intersection of pattern recognition, timing, and endurance in both my life and my professional work.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="container mx-auto px-6 py-24">
-        <h2 class="text-3xl font-bold mb-12 text-center text-slate-900">Professional Experience</h2>
-        <div class="max-w-4xl mx-auto space-y-8">
-            <div class="glass-card p-8 rounded-2xl relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-1.5 h-full bg-indigo-600"></div>
-                <div class="flex flex-col md:flex-row md:justify-between mb-4">
+    <section id="skills" class="container mx-auto px-6 py-24">
+        <h2 class="text-3xl font-bold mb-12 text-center text-slate-900">Expertise Matrix</h2>
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div class="glass-card p-8 rounded-2xl shadow-sm border-t-4 border-indigo-600">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 mr-4">
+                        <i class="fas fa-code text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">Technical Proficiency</h3>
+                </div>
+                <div class="space-y-4">
                     <div>
-                        <h3 class="text-2xl font-bold text-slate-900">Data Analyst</h3>
-                        <p class="text-indigo-600 font-medium italic">Sacred Heart University | Oct 2024 — Dec 2025</p>
+                        <p class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2">Languages & Frameworks</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 rounded-md text-sm">Python (Pandas, Scikit-learn, NLP)</span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-md text-sm">SQL (T-SQL, MySQL)</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2">Data Infrastructure & BI</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 rounded-md text-sm">AWS (S3, Redshift)</span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-md text-sm">SSRS</span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-md text-sm">Power BI</span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-md text-sm">ETL Pipelines</span>
+                        </div>
                     </div>
                 </div>
-                <ul class="space-y-4 text-slate-600 list-disc ml-5 leading-relaxed">
-                    <li>Optimized strategic decision-making by delivering <span class="font-semibold">50+ customized SSRS reports</span>, reducing manual data processing cycles by 30%.</li>
-                    <li>Developed robust <span class="font-semibold">T-SQL ETL pipelines</span> for institutional reporting, ensuring 99%+ data accuracy and adherence to federal compliance.</li>
-                    <li>Leveraged Python-based <span class="font-semibold">NLP techniques</span> to analyze student sentiment, identifying friction points that improved orientation satisfaction by 10%.</li>
-                </ul>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl shadow-sm border-t-4 border-emerald-500">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 mr-4">
+                        <i class="fas fa-brain text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">Strategic & Behavioral</h3>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2">Scientific Foundations</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 rounded-md text-sm">Econometrics</span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-md text-sm">Cognitive Psychology</span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-md text-sm">Behavioral Economics</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2">Analysis & Leadership</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 rounded-md text-sm">Predictive Modeling</span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-md text-sm">Stakeholder Management</span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-md text-sm">Monte Carlo Simulations</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="container mx-auto px-6 py-24 bg-white rounded-t-[3rem] shadow-sm">
+    <section id="projects" class="container mx-auto px-6 py-24 bg-white rounded-t-[3rem] shadow-sm border-x border-t border-slate-100">
         <div class="text-center mb-16">
             <h2 class="text-4xl font-extrabold text-slate-900">Featured Analytics Projects</h2>
             <p class="text-slate-500 mt-4">Translating raw data into measurable business outcomes.</p>
@@ -113,49 +153,64 @@
             <div class="group flex flex-col glass-card p-6 rounded-3xl hover:shadow-2xl transition project-card">
                 <div class="h-48 mb-6 rounded-2xl overflow-hidden relative">
                     <img src="obesity.jpg" alt="Obesity Risk System" class="w-full h-full object-cover project-img">
-                    <div class="absolute top-3 right-3 bg-white/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-600 uppercase">Symposium Presentation</div>
+                    <div class="absolute top-3 right-3 bg-white/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-600 uppercase tracking-tighter shadow-sm">Symposium Selection</div>
                 </div>
-                <h3 class="text-xl font-bold mb-2">County Obesity Risk Tool (C-ORIS)</h3>
+                <h3 class="text-xl font-bold mb-2">C-ORIS: County Obesity Risk Tool</h3>
                 <p class="text-slate-600 text-sm mb-4 flex-grow">
                     A predictive AI tool using XGBoost and Monte Carlo simulations (10,000+ scenarios) to forecast community-wide obesity risks based on behavioral indicators.
                 </p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold border border-indigo-100">Python</span>
-                    <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold border border-indigo-100">XGBoost</span>
-                    <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold border border-indigo-100">Streamlit</span>
+                <div class="flex flex-wrap gap-2 mb-6 text-[11px] font-bold uppercase tracking-widest text-slate-500">
+                    <span>Python</span> • <span>XGBoost</span> • <span>Streamlit</span>
                 </div>
                 <a href="https://github.com/Mohitphulwani/County-Obesity-Risk-Intervention-System-C-ORIS-" class="text-indigo-600 font-bold hover:underline flex items-center" target="_blank">View Repository <i class="fas fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i></a>
             </div>
 
             <div class="group flex flex-col glass-card p-6 rounded-3xl hover:shadow-2xl transition project-card">
                 <div class="h-48 mb-6 rounded-2xl overflow-hidden">
-                    <img src="icrecream.jpg" alt="Happy Cow Sales Analysis" class="w-full h-full object-cover project-img">
+                    <img src="icecream.jpg" alt="Happy Cow Sales Analysis" class="w-full h-full object-cover project-img">
                 </div>
                 <h3 class="text-xl font-bold mb-2">Retail Demand Forecasting</h3>
                 <p class="text-slate-600 text-sm mb-4 flex-grow">
-                    Deep-dive into POS sales data to identify demand volatility. Developed a forecasting model that suggested a 10% reduction in labor costs through optimized staffing.
+                    Analysis of Happy Cow POS sales data to identify demand volatility. Developed a model that proposed a 10% reduction in labor costs through optimized scheduling.
                 </p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold border border-slate-200">Python</span>
-                    <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold border border-slate-200">Pandas</span>
-                    <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold border border-slate-200">SQL</span>
+                <div class="flex flex-wrap gap-2 mb-6 text-[11px] font-bold uppercase tracking-widest text-slate-500">
+                    <span>Forecasting</span> • <span>Pandas</span> • <span>Retail Analytics</span>
                 </div>
                 <a href="https://github.com/Mohitphulwani/happy-cow-ice-cream-sales-analysis/blob/main/HappyCow_SalesForecasting_CaseStudy%20(3)%20(1).ipynb" class="text-indigo-600 font-bold hover:underline flex items-center" target="_blank">View Notebook <i class="fas fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i></a>
             </div>
 
             <div class="group flex flex-col glass-card p-6 rounded-3xl hover:shadow-2xl transition project-card">
                 <div class="h-48 mb-6 rounded-2xl overflow-hidden">
-                    <img src="tourism.jpg" alt="Wellness Tourism Prediction" class="w-full h-full object-cover project-img">
+                    <img src="tourism.jpeg" alt="Wellness Tourism Prediction" class="w-full h-full object-cover project-img">
                 </div>
                 <h3 class="text-xl font-bold mb-2">Wellness Tourism Churn</h3>
                 <p class="text-slate-600 text-sm mb-4 flex-grow">
-                    Applied classification algorithms to predict customer churn. Identified 'Service Wait Times' as a critical psychological barrier, aiming to lift retention-driven ROI by 20%.
+                    Applied classification algorithms to predict customer churn. Identified 'Service Wait Times' as a critical psychological barrier to repeat bookings.
                 </p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold border border-indigo-100">Machine Learning</span>
-                    <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold border border-indigo-100">EDA</span>
+                <div class="flex flex-wrap gap-2 mb-6 text-[11px] font-bold uppercase tracking-widest text-slate-500">
+                    <span>Machine Learning</span> • <span>EDA</span> • <span>Churn Analysis</span>
                 </div>
                 <a href="https://github.com/Mohitphulwani/wellness-tourism-customer-prediction" class="text-indigo-600 font-bold hover:underline flex items-center" target="_blank">View Repository <i class="fas fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="container mx-auto px-6 py-24">
+        <h2 class="text-3xl font-bold mb-12 text-center text-slate-900">Professional Experience</h2>
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1.5 h-full bg-indigo-600"></div>
+                <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900">Data Analyst</h3>
+                        <p class="text-indigo-600 font-medium italic">Sacred Heart University | Oct 2024 — Dec 2025</p>
+                    </div>
+                </div>
+                <ul class="space-y-4 text-slate-600 list-disc ml-5 leading-relaxed">
+                    <li>Optimized institutional decision-making by delivering <span class="font-semibold text-slate-900">50+ customized SSRS reports</span>, reducing manual data processing cycles by 30%.</li>
+                    <li>Developed <span class="font-semibold text-slate-900">T-SQL ETL pipelines</span> for federal reporting, ensuring 99%+ data accuracy and compliance.</li>
+                    <li>Utilized <span class="font-semibold text-slate-900">NLP sentiment analysis</span> to refine student engagement strategies, increasing orientation satisfaction by 10%.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -169,7 +224,6 @@
         </div>
         <div class="text-xs text-slate-400 space-y-1">
             <p>© 2025 Mohit Phulwani. Designed for Data Integrity.</p>
-            <p>Built with Tailwind CSS & High-Efficiency Logic.</p>
         </div>
     </footer>
 

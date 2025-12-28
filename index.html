@@ -12,8 +12,8 @@
         .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(226, 232, 240, 1); }
         .gradient-text { background: linear-gradient(135deg, #4f46e5 0%, #0ea5e9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero-shape { position: absolute; top: -10%; right: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, rgba(248, 250, 252, 0) 70%); z-index: -1; }
-        .project-card { transition: all 0.3s ease; }
-        .project-card:hover { transform: translateY(-5px); }
+        .project-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .project-card:hover { transform: translateY(-10px); }
     </style>
 </head>
 <body class="text-slate-800">
@@ -62,7 +62,7 @@
                 <h3 class="text-indigo-400 font-bold mb-2 uppercase tracking-widest text-sm">Education</h3>
                 <p class="text-xl font-semibold">MS in Business Analytics</p>
                 <p class="text-slate-400 text-sm">Sacred Heart University (GPA 3.9/4.0)</p>
-                <p class="text-slate-400 text-sm mt-2">B.A. in Economics & Psychology</p>
+                <p class="text-slate-400 text-sm mt-2">Bachelor of Arts in Economics & Psychology</p>
                 <p class="text-slate-400 text-sm">University of Mumbai</p>
             </div>
             <div>
@@ -90,14 +90,14 @@
                     <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 mr-4">
                         <i class="fas fa-chess-knight text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold">Strategy & Leadership</h3>
+                    <h3 class="text-2xl font-bold">Strategy & Frameworks</h3>
                 </div>
                 <div class="flex flex-wrap gap-2">
                     <span class="px-3 py-1 bg-indigo-50 text-indigo-700 font-medium rounded-md text-sm">MECE Framework</span>
-                    <span class="px-3 py-1 bg-indigo-50 text-indigo-700 font-medium rounded-md text-sm">Root Cause Analysis</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-700 font-medium rounded-md text-sm">Root Cause Analysis (RCA)</span>
                     <span class="px-3 py-1 bg-indigo-50 text-indigo-700 font-medium rounded-md text-sm">Financial Modeling</span>
                     <span class="px-3 py-1 bg-indigo-50 text-indigo-700 font-medium rounded-md text-sm">Predictive Modeling</span>
-                    <span class="px-3 py-1 bg-indigo-50 text-indigo-700 font-medium rounded-md text-sm">Risk Mitigation</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-700 font-medium rounded-md text-sm">Data Governance</span>
                 </div>
             </div>
             <div class="glass-card p-8 rounded-2xl shadow-sm border-t-4 border-emerald-500">
@@ -119,43 +119,64 @@
     </section>
 
     <section id="projects" class="container mx-auto px-6 py-24 bg-white rounded-t-[3rem] shadow-sm">
-        <h2 class="text-4xl font-extrabold text-center text-slate-900 mb-16">Strategic Projects</h2>
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-extrabold text-slate-900">Strategic Projects</h2>
+            <p class="text-slate-500 mt-4">Predictive Modeling and Prescriptive Decision Frameworks</p>
+        </div>
+
         <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div class="group flex flex-col glass-card p-8 rounded-3xl project-card">
-                <div class="p-3 bg-indigo-50 text-indigo-600 rounded-2xl w-fit mb-6">
-                    <i class="fas fa-chart-area text-2xl"></i>
+            <div class="group flex flex-col glass-card rounded-3xl overflow-hidden project-card border border-slate-100">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="obesity.jpg" alt="Obesity Risk Analysis" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute top-4 right-4 flex gap-2">
+                        <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase">Python</span>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-3">C-ORIS: Prescriptive Risk System</h3>
-                <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                    Engineered a model to forecast health risks using XGBoost and Monte Carlo simulations to identify highest-ROI policy interventions.
-                </p>
-                <a href="https://github.com/Mohitphulwani/County-Obesity-Risk-Intervention-System-C-ORIS-" target="_blank" class="mt-auto text-indigo-600 font-bold hover:underline inline-flex items-center">
-                    View on GitHub <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-                </a>
+                <div class="p-8 flex flex-grow flex-col">
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">C-ORIS: Prescriptive Risk System</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Engineered a prescriptive model forecasting health risks using XGBoost and Monte Carlo simulations to identify highest-ROI policy interventions.
+                    </p>
+                    <a href="https://github.com/Mohitphulwani/County-Obesity-Risk-Intervention-System-C-ORIS-" target="_blank" class="mt-auto text-indigo-600 font-bold hover:underline inline-flex items-center">
+                        View on GitHub <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                    </a>
+                </div>
             </div>
-            <div class="group flex flex-col glass-card p-8 rounded-3xl project-card">
-                <div class="p-3 bg-emerald-50 text-emerald-600 rounded-2xl w-fit mb-6">
-                    <i class="fas fa-user-check text-2xl"></i>
+
+            <div class="group flex flex-col glass-card rounded-3xl overflow-hidden project-card border border-slate-100">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="tourism.jpg" alt="Wellness Tourism Analytics" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute top-4 right-4 flex gap-2">
+                        <span class="bg-emerald-600 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase">ML/ROI</span>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Wellness Tourism Prediction</h3>
-                <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                    Built a propensity model to score lead quality and utilized behavioral segmentation to isolate purchase triggers maximizing conversion ROI.
-                </p>
-                <a href="https://github.com/Mohitphulwani/wellness-tourism-customer-prediction" target="_blank" class="mt-auto text-indigo-600 font-bold hover:underline inline-flex items-center">
-                    View on GitHub <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-                </a>
+                <div class="p-8 flex flex-grow flex-col">
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Wellness Tourism Prediction</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Built a propensity model to score lead quality and utilized behavioral segmentation to isolate purchase triggers maximizing conversion ROI.
+                    </p>
+                    <a href="https://github.com/Mohitphulwani/wellness-tourism-customer-prediction" target="_blank" class="mt-auto text-indigo-600 font-bold hover:underline inline-flex items-center">
+                        View on GitHub <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                    </a>
+                </div>
             </div>
-            <div class="group flex flex-col glass-card p-8 rounded-3xl project-card">
-                <div class="p-3 bg-blue-50 text-blue-600 rounded-2xl w-fit mb-6">
-                    <i class="fas fa-ice-cream text-2xl"></i>
+
+            <div class="group flex flex-col glass-card rounded-3xl overflow-hidden project-card border border-slate-100">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="icecream.jpg" alt="Ice Cream Sales Analysis" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute top-4 right-4 flex gap-2">
+                        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase">Forecasting</span>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Demand Forecasting: Happy Cow</h3>
-                <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                    Conducted diagnostic analysis on transaction data to develop data-driven staffing protocols and align labor costs with traffic.
-                </p>
-                <a href="https://github.com/Mohitphulwani/happy-cow-ice-cream-sales-analysis" target="_blank" class="mt-auto text-indigo-600 font-bold hover:underline inline-flex items-center">
-                    View on GitHub <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-                </a>
+                <div class="p-8 flex flex-grow flex-col">
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Demand Forecasting: Happy Cow</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Conducted diagnostic analysis on transaction data to develop data-driven staffing protocols and align labor costs with actual customer traffic.
+                    </p>
+                    <a href="https://github.com/Mohitphulwani/happy-cow-ice-cream-sales-analysis" target="_blank" class="mt-auto text-indigo-600 font-bold hover:underline inline-flex items-center">
+                        View on GitHub <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -169,8 +190,18 @@
                 <p class="text-indigo-600 font-medium italic mb-4">Sacred Heart University | Oct 2024 — Dec 2025</p>
                 <ul class="space-y-3 text-slate-600 list-disc ml-5 text-sm">
                     <li>Utilized <span class="font-bold text-slate-800">MECE frameworks</span> for attrition analysis, enabling a $2M budget reallocation.</li>
-                    <li>Engineered custom T-SQL views to accelerate executive report delivery by 60%.</li>
-                    <li>Automated SQL/Python pipelines, reducing manual labor by 40+ hours per month.</li>
+                    <li>Engineered custom T-SQL views and stored procedures to accelerate executive report delivery by 60%.</li>
+                    <li>Automated SQL/Python pipelines, reducing manual administrative labor by 40+ hours per month.</li>
+                </ul>
+            </div>
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1.5 h-full bg-slate-400"></div>
+                <h3 class="text-2xl font-bold text-slate-900">Business Data Analyst</h3>
+                <p class="text-slate-500 font-medium italic mb-4">Bharti Lining Pvt. Ltd | Jun 2022 — Jul 2024</p>
+                <ul class="space-y-3 text-slate-600 list-disc ml-5 text-sm">
+                    <li>Developed risk-resiliency frameworks protecting production from 15% projected market volatility.</li>
+                    <li>Decommissioned low-margin products via SKU-level analysis, increasing portfolio EBITDA by 12%.</li>
+                    <li>Collaborated with CFO to build financial forecasting models yielding a 2.5x ROI.</li>
                 </ul>
             </div>
         </div>

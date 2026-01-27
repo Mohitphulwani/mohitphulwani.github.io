@@ -9,139 +9,171 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0f172a',
+                        darkCard: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; color: #1a1a1a; scroll-behavior: smooth; overflow-x: hidden; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background-color 0.3s, color 0.3s; }
         h1, h2, h3, .serif { font-family: 'DM Serif Display', serif; }
 
         /* Ticker Animation */
         @keyframes scroll {
             0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-250px * 7)); }
+            100% { transform: translateX(calc(-250px * 10)); }
         }
-        .ticker-container { overflow: hidden; white-space: nowrap; position: relative; padding: 40px 0; }
-        .ticker-wrapper { display: flex; width: calc(250px * 14); animation: scroll 30s linear infinite; }
+        .ticker-wrapper { display: flex; width: calc(250px * 20); animation: scroll 40s linear infinite; }
         .ticker-item { width: 250px; display: flex; align-items: center; justify-content: center; gap: 12px; font-weight: 600; font-size: 1.1rem; }
         .ticker-item i { font-size: 2.5rem; }
 
         /* Horizontal Journey Scroll */
-        .journey-scroll { display: flex; overflow-x: auto; gap: 24px; padding: 20px 0; scrollbar-width: none; -ms-overflow-style: none; }
+        .journey-scroll { display: flex; overflow-x: auto; gap: 24px; padding: 20px 0; scrollbar-width: none; }
         .journey-scroll::-webkit-scrollbar { display: none; }
-        .journey-card { min-width: 350px; background: #fdfdfd; border: 1px solid #f1f1f1; border-radius: 24px; padding: 32px; transition: transform 0.3s ease; }
-        .journey-card:hover { transform: translateY(-5px); border-color: #e5e7eb; }
+        .journey-card { min-width: 380px; border-radius: 24px; padding: 32px; transition: transform 0.3s ease; }
+        
+        .dark .journey-card { background: #1e293b; border-color: #334155; color: white; }
+        .light .journey-card { background: #fdfdfd; border: 1px solid #f1f1f1; color: #1a1a1a; }
     </style>
 </head>
-<body>
+<body class="light bg-white text-gray-900 overflow-x-hidden">
 
-    <nav class="flex justify-between items-center px-8 md:px-12 py-8 bg-white sticky top-0 z-50">
-        <div class="text-xl font-bold tracking-tighter">MP</div>
-        <div class="hidden md:flex space-x-10 text-sm font-medium text-gray-600">
-            <a href="#home" class="hover:text-black transition">Home</a>
-            <a href="#projects" class="hover:text-black transition">Projects</a>
-            <a href="#journey" class="hover:text-black transition">Journey</a>
+    <nav class="flex justify-between items-center px-8 md:px-12 py-8 bg-transparent sticky top-0 z-50 backdrop-blur-md">
+        <div class="text-xl font-bold tracking-tighter dark:text-white">MP</div>
+        <div class="hidden md:flex space-x-10 text-sm font-medium text-gray-600 dark:text-gray-300">
+            <a href="#home" class="hover:text-black dark:hover:text-white">Home</a>
+            <a href="#projects" class="hover:text-black dark:hover:text-white">Projects</a>
+            <a href="#journey" class="hover:text-black dark:hover:text-white">Journey</a>
         </div>
-        <a href="mailto:mohitphulwani001@gmail.com" class="bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition">Contact</a>
+        <a href="mailto:mohitphulwani001@gmail.com" class="bg-black text-white dark:bg-white dark:text-black px-6 py-2 rounded-full text-sm font-medium">Contact</a>
     </nav>
 
     <section id="home" class="container mx-auto px-8 md:px-12 py-16 flex flex-col lg:flex-row items-center justify-between">
         <div class="lg:w-1/2 space-y-6">
-            <h1 class="text-6xl lg:text-7xl leading-tight text-gray-900">
+            <h1 class="text-6xl lg:text-7xl leading-tight dark:text-white">
                 Uncovering Insights, <br> Driving Growth
             </h1>
-            <p class="text-gray-600 text-lg max-w-lg leading-relaxed">
-                👋 Hello, I'm Mohit, a strategic Data Analyst specialized in leveraging complex data to deliver actionable insights. I excel at optimizing processes, driving business growth, and supporting high-stakes decision-making through data-driven solutions.
+            <p class="text-gray-600 dark:text-gray-400 text-lg max-w-lg leading-relaxed">
+                👋 Hello, I'm Mohit, a strategic Data Analyst specialized in leveraging complex data to deliver actionable insights. I excel at optimizing processes and supporting high-stakes decision-making through data-driven solutions.
             </p>
         </div>
         <div class="lg:w-1/2 flex justify-end mt-12 lg:mt-0">
-            <img src="headshot.jpeg" alt="Mohit Phulwani" class="rounded-[4rem] w-full md:w-[450px] h-[550px] object-cover shadow-sm">
+            <img src="headshot.jpeg" alt="Mohit Phulwani" class="rounded-[4rem] w-full md:w-[450px] h-[550px] object-cover shadow-2xl">
         </div>
     </section>
 
-    <div class="ticker-container border-y border-gray-100 my-10">
+    <div class="overflow-hidden border-y border-gray-100 dark:border-gray-800 my-10 py-10">
         <div class="ticker-wrapper">
             <div class="ticker-item"><i class="devicon-python-plain colored"></i> Python</div>
             <div class="ticker-item"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
             <div class="ticker-item"><i class="devicon-pandas-plain colored"></i> Pandas</div>
             <div class="ticker-item"><i class="devicon-scikitlearn-plain colored"></i> Scikit-Learn</div>
             <div class="ticker-item"><i class="devicon-tableau-plain colored"></i> Tableau</div>
-            <div class="ticker-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</div>
             <div class="ticker-item"><i class="devicon-googlecloud-plain colored"></i> BigQuery</div>
+            <div class="ticker-item"><i class="devicon-snowflake-plain colored"></i> Snowflake</div>
+            <div class="ticker-item"><i class="devicon-git-plain colored"></i> Git</div>
+            <div class="ticker-item"><i class="devicon-apache-plain colored"></i> Spark</div>
+            <div class="ticker-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</div>
             <div class="ticker-item"><i class="devicon-python-plain colored"></i> Python</div>
             <div class="ticker-item"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
             <div class="ticker-item"><i class="devicon-pandas-plain colored"></i> Pandas</div>
             <div class="ticker-item"><i class="devicon-scikitlearn-plain colored"></i> Scikit-Learn</div>
             <div class="ticker-item"><i class="devicon-tableau-plain colored"></i> Tableau</div>
-            <div class="ticker-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</div>
             <div class="ticker-item"><i class="devicon-googlecloud-plain colored"></i> BigQuery</div>
+            <div class="ticker-item"><i class="devicon-snowflake-plain colored"></i> Snowflake</div>
+            <div class="ticker-item"><i class="devicon-git-plain colored"></i> Git</div>
+            <div class="ticker-item"><i class="devicon-apache-plain colored"></i> Spark</div>
+            <div class="ticker-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</div>
         </div>
     </div>
 
     <section id="projects" class="container mx-auto px-8 md:px-12 py-24 space-y-32">
         <div class="text-center">
-            <h2 class="text-5xl mb-4">Explore My Projects</h2>
+            <h2 class="text-5xl mb-4 dark:text-white">Explore My Projects</h2>
             <p class="text-gray-500">Selected research and analytics initiatives</p>
         </div>
 
         <div class="flex flex-col lg:flex-row items-center gap-16">
-            <div class="lg:w-1/2 bg-indigo-50 rounded-[3rem] p-12 h-[450px] flex items-center justify-center overflow-hidden">
-                <img src="vitality_viz.jpg" alt="Behavioral Vitality" class="rounded-2xl shadow-2xl transform rotate-2 hover:rotate-0 transition duration-500">
+            <div class="lg:w-1/2 bg-indigo-50 dark:bg-indigo-900/20 rounded-[3rem] p-12 h-[450px] flex items-center justify-center overflow-hidden">
+                <img src="ecommerce.jpg" alt="Behavioral Vitality" class="rounded-2xl shadow-2xl transform rotate-2 hover:rotate-0 transition duration-500 h-full object-cover">
             </div>
             <div class="lg:w-1/2 space-y-6">
-                <h3 class="text-4xl">Behavioral Vitality Engine</h3>
-                <p class="text-gray-600 leading-relaxed text-lg">A Stochastic Survival Framework developed to estimate customer "Vitality" as a latent state. This project quantifies Revenue at Risk through habit strength and exponential memory decay modeling.</p>
-                <a href="https://github.com/Mohitphulwani/behavioral-vitality-engine" target="_blank" class="inline-block border border-gray-300 px-8 py-3 rounded-xl text-sm font-bold hover:bg-black hover:text-white transition">View on Github ↗</a>
+                <h3 class="text-4xl dark:text-white">Behavioral Vitality Engine</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">A Stochastic Survival Framework estimating customer "Vitality" as a latent state. Moving beyond binary churn to quantify Revenue at Risk through habit strength modeling.</p>
+                <a href="https://github.com/Mohitphulwani/behavioral-vitality-engine" target="_blank" class="inline-block border border-gray-300 dark:border-gray-700 dark:text-white px-8 py-3 rounded-xl text-sm font-bold hover:bg-black hover:text-white transition">View Project ↗</a>
             </div>
         </div>
 
         <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
-            <div class="lg:w-1/2 bg-blue-50 rounded-[3rem] p-12 h-[450px] flex items-center justify-center overflow-hidden">
-                <img src="revenue_viz.jpg" alt="CRIS" class="rounded-2xl shadow-2xl transform -rotate-2 hover:rotate-0 transition duration-500">
+            <div class="lg:w-1/2 bg-blue-50 dark:bg-blue-900/20 rounded-[3rem] p-12 h-[450px] flex items-center justify-center overflow-hidden">
+                <img src="superstore.jpg" alt="CRIS" class="rounded-2xl shadow-2xl transform -rotate-2 hover:rotate-0 transition duration-500 h-full object-cover">
+            </div>
+            <div class="lg:w-1/2 space-y-6 text-right">
+                <h3 class="text-4xl dark:text-white">Causal Revenue Intelligence (CRIS)</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">Architected a system to identify hidden profit leakage using econometric matching. Isolated $159k in annual leakage by analyzing non-strategic discounting effects.</p>
+                <a href="https://github.com/Mohitphulwani/Causal-Revenue-Intelligence-System" target="_blank" class="inline-block border border-gray-300 dark:border-gray-700 dark:text-white px-8 py-3 rounded-xl text-sm font-bold hover:bg-black hover:text-white transition">View Project ↗</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2 bg-rose-50 dark:bg-rose-900/20 rounded-[3rem] p-12 h-[450px] flex items-center justify-center overflow-hidden">
+                <img src="countyobesity.jpg" alt="C-ORIS" class="rounded-2xl shadow-2xl transform rotate-1 hover:rotate-0 transition duration-500 h-full object-cover">
             </div>
             <div class="lg:w-1/2 space-y-6">
-                <h3 class="text-4xl">Causal Revenue Intelligence (CRIS)</h3>
-                <p class="text-gray-600 leading-relaxed text-lg">Architected a system to identify hidden profit leakage using econometric matching. Identified $159k in annual leakage by isolating the causal effect of non-strategic discounting.</p>
-                <a href="https://github.com/Mohitphulwani/Causal-Revenue-Intelligence-System" target="_blank" class="inline-block border border-gray-300 px-8 py-3 rounded-xl text-sm font-bold hover:bg-black hover:text-white transition">View on Github ↗</a>
+                <h3 class="text-4xl dark:text-white">County Obesity Risk System (C-ORIS)</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">Engineered a prescriptive model forecasting health risks using XGBoost. Identifies highest-ROI policy interventions to optimize regional healthcare allocation.</p>
+                <a href="https://github.com/Mohitphulwani/County-Obesity-Risk-Intervention-System-C-ORIS-" target="_blank" class="inline-block border border-gray-300 dark:border-gray-700 dark:text-white px-8 py-3 rounded-xl text-sm font-bold hover:bg-black hover:text-white transition">View Project ↗</a>
             </div>
         </div>
     </section>
 
-    <section id="journey" class="py-24 bg-[#fafafa] rounded-[4rem]">
+    <section id="journey" class="py-24 bg-[#fafafa] dark:bg-slate-900 rounded-[4rem]">
         <div class="container mx-auto px-8 md:px-12">
-            <h2 class="text-5xl mb-12">My journey</h2>
+            <h2 class="text-5xl mb-12 dark:text-white">My journey</h2>
             <div class="journey-scroll">
                 
-                <div class="journey-card">
+                <div class="journey-card shadow-sm">
                     <span class="text-indigo-600 font-bold text-xs uppercase tracking-widest">Education</span>
                     <h4 class="text-2xl font-bold mt-2 mb-1">M.S. Business Analytics</h4>
-                    <p class="text-gray-500 text-sm mb-4">Sacred Heart University | 2024 - 2025</p>
-                    <p class="text-gray-600 text-sm leading-relaxed">Focus on Machine Learning, Predictive Modeling, and SQL. Maintained a 3.9 GPA while serving as a Graduate Assistant.</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Sacred Heart University | 2024 - 2025</p>
+                    <p class="text-sm leading-relaxed">Specialized in Machine Learning, Predictive Modeling, and SQL. Maintained a 3.9 GPA while delivering data-driven institutional insights.</p>
                 </div>
 
-                <div class="journey-card">
+                <div class="journey-card shadow-sm">
                     <span class="text-emerald-600 font-bold text-xs uppercase tracking-widest">Experience</span>
                     <h4 class="text-2xl font-bold mt-2 mb-1">Data Analyst (GA)</h4>
-                    <p class="text-gray-500 text-sm mb-4">Sacred Heart University | 2024 - 2025</p>
-                    <p class="text-gray-600 text-sm leading-relaxed">Partnered with finance and IT teams to automate reporting pipelines and document technical workflows for institutional research.</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Sacred Heart University | 2024 - 2025</p>
+                    <p class="text-sm leading-relaxed">Automated SQL pipelines and built Power BI dashboards that reduced manual reporting time by 40% for leadership.</p>
                 </div>
 
-                <div class="journey-card">
-                    <span class="text-indigo-600 font-bold text-xs uppercase tracking-widest">Education</span>
-                    <h4 class="text-2xl font-bold mt-2 mb-1">B.A. Economics</h4>
-                    <p class="text-gray-500 text-sm mb-4">University of Mumbai | 2021 - 2024</p>
-                    <p class="text-gray-600 text-sm leading-relaxed">Deep dive into Econometrics, Statistical Modeling, and Behavioral Economics to understand causal market drivers.</p>
-                </div>
-
-                <div class="journey-card">
-                    <span class="text-indigo-600 font-bold text-xs uppercase tracking-widest">Education</span>
-                    <h4 class="text-2xl font-bold mt-2 mb-1">Diploma in ECE</h4>
-                    <p class="text-gray-500 text-sm mb-4">Electronics & Communication Engineering</p>
-                    <p class="text-gray-600 text-sm leading-relaxed">Foundation in systems architecture, signal processing, and technical engineering principles.</p>
-                </div>
-
-                <div class="journey-card">
+                <div class="journey-card shadow-sm">
                     <span class="text-emerald-600 font-bold text-xs uppercase tracking-widest">Experience</span>
                     <h4 class="text-2xl font-bold mt-2 mb-1">Business Data Analyst</h4>
-                    <p class="text-gray-500 text-sm mb-4">Bharti Lining Pvt. Ltd | 2022 - 2024</p>
-                    <p class="text-gray-600 text-sm leading-relaxed">Optimized business processes and mapped workflows, reducing order delays by 20% through targeted data audits.</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Bharti Lining Pvt. Ltd | 2022 - 2024</p>
+                    <p class="text-sm leading-relaxed">Identified operational inefficiencies using SQL and Python; reduced order delays by 20% through process optimization.</p>
+                </div>
+
+                <div class="journey-card shadow-sm">
+                    <span class="text-indigo-600 font-bold text-xs uppercase tracking-widest">Education</span>
+                    <h4 class="text-2xl font-bold mt-2 mb-1">B.A. Economics</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">University of Mumbai | 2021 - 2024</p>
+                    <p class="text-sm leading-relaxed">Rigorous study of Econometrics and Behavioral Economics to deconstruct complex market drivers.</p>
+                </div>
+
+                <div class="journey-card shadow-sm">
+                    <span class="text-indigo-600 font-bold text-xs uppercase tracking-widest">Education</span>
+                    <h4 class="text-2xl font-bold mt-2 mb-1">Diploma in ECE</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Electronics & Communication Engineering</p>
+                    <p class="text-sm leading-relaxed">Foundation in technical engineering principles, systems architecture, and signal processing.</p>
                 </div>
 
             </div>
@@ -149,19 +181,38 @@
     </section>
 
     <footer class="container mx-auto px-8 md:px-12 py-24 text-center">
-        <div class="bg-[#1e2b4a] rounded-[3.5rem] py-24 mb-12 flex flex-col items-center shadow-2xl">
+        <div class="bg-[#1e2b4a] rounded-[3.5rem] py-24 mb-12 flex flex-col items-center">
             <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 overflow-hidden">
                 <img src="headshot.jpeg" class="w-full h-full object-cover">
             </div>
-            <p class="text-white mb-2 text-sm opacity-60 font-medium">Get in touch</p>
-            <h2 class="text-white text-3xl md:text-5xl mb-10 serif">Email: mohitphulwani001@gmail.com</h2>
+            <p class="text-white mb-2 text-sm opacity-60">Mohit Phulwani</p>
+            <h2 class="text-white text-3xl md:text-5xl mb-10 serif underline">mohitphulwani001@gmail.com</h2>
             <div class="flex space-x-6">
-                <a href="https://linkedin.com/in/mohitphulwani777" class="bg-white/10 hover:bg-white/20 text-white px-6 py-2 rounded-full text-sm transition">LinkedIn</a>
-                <a href="https://github.com/Mohitphulwani" class="bg-white/10 hover:bg-white/20 text-white px-6 py-2 rounded-full text-sm transition">Github</a>
+                <a href="https://linkedin.com/in/mohitphulwani777" class="bg-white/10 text-white px-6 py-2 rounded-full text-sm">LinkedIn</a>
+                <a href="https://github.com/Mohitphulwani" class="bg-white/10 text-white px-6 py-2 rounded-full text-sm">Github</a>
             </div>
         </div>
-        <p class="text-[10px] text-gray-300 tracking-widest uppercase font-bold">Mohit Phulwani © 2026. Kirkland, WA.</p>
+        <p class="text-[10px] text-gray-400 tracking-widest uppercase font-bold">Mohit © 2026. Kirkland, WA.</p>
     </footer>
 
+    <button onclick="toggleDarkMode()" class="fixed bottom-8 right-8 bg-black dark:bg-white text-white dark:text-black w-12 h-12 rounded-full shadow-2xl z-[100] flex items-center justify-center transition-all active:scale-90">
+        <i id="modeIcon" class="fas fa-moon"></i>
+    </button>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const icon = document.getElementById('modeIcon');
+            if (body.classList.contains('light')) {
+                body.classList.replace('light', 'dark');
+                body.classList.add('bg-darkBg');
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                body.classList.replace('dark', 'light');
+                body.classList.remove('bg-darkBg');
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+    </script>
 </body>
 </html>
